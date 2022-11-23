@@ -1,17 +1,10 @@
-"""
-В данном конкретном задании нет необходимости отдельно выделять функцию
-печати для каждого города, сделать это не сложно, но бессмыслено.
-Можно и рекурсивную функцию написать, и однострок вообще - все это лишь усложнит
-восприятие кода.
-Но если требование по выделению функции останется - ладно, выделю.
-"""
+from requests import get, Response
+from requests.exceptions import HTTPError, Timeout
+
+
 LOCATIONS: tuple = ('London', 'SVO', 'Череповец')
 PARAMS: dict = {'m3nqT': '', 'lang': 'ru'}
 URL: str = 'http://wttr.in'
-
-
-from requests import get, Response
-from requests.exceptions import HTTPError, Timeout
 
 
 def print_weather() -> None:
